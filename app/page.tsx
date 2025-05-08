@@ -10,23 +10,35 @@ export default function Home() {
         Automatisieren Sie jegliche aufwendige Rechtsaufgaben mit von Fach­anwälten mitentwickelten Apps
         – die sofort in Ihrer bestehenden IT-Landschaft einsatzbereit sind.
       </p>
-      <div className="flex justify-center gap-4">
-        <Link href="/catalog">
-          <a className="px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 transition">
-            🚀 Verträge automatisieren
-          </a>
+      <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center sm:gap-4">
+        <Link
+          href="/catalog"
+          className="inline-flex w-full sm:w-auto items-center justify-center
+               rounded-md bg-indigo-600 px-6 py-3 text-sm font-medium
+               text-white shadow transition hover:bg-indigo-700 focus:outline-none
+               focus-visible:ring focus-visible:ring-indigo-400"
+        >
+          🚀 Verträge automatisieren
         </Link>
 
-        <Link href="/catalog">
-          <a className="px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 transition">
-            🔒 Compliance & DSGVO meistern
-          </a>
+        <Link
+          href="/catalog"
+          className="inline-flex w-full sm:w-auto items-center justify-center
+               rounded-md bg-indigo-200 px-6 py-3 text-sm font-medium
+               text-white shadow transition hover:bg-indigo-400 focus:outline-none
+               focus-visible:ring focus-visible:ring-indigo-100"
+        >
+          🔒 Compliance & DSGVO meistern
         </Link>
 
-        <Link href="/catalog">
-          <a className="px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 transition">
-            👥 HR rechtssicher gestalten
-          </a>
+        <Link
+          href="/catalog"
+          className="inline-flex w-full sm:w-auto items-center justify-center
+               rounded-md bg-indigo-200 px-6 py-3 text-sm font-medium
+               text-white shadow transition hover:bg-indigo-400 focus:outline-none
+               focus-visible:ring focus-visible:ring-indigo-100"
+        >
+          👥 HR rechtssicher gestalten
         </Link>
       </div>
 

@@ -27,7 +27,7 @@ export default function MainNav({
     >
       {/* ── Logo / Brand ─────────────────────────────── */}
       <Link href="/" className="font-display text-lg font-bold">
-        Legal<span className="text-primary">AI</span>
+        Legal<span className="text-primary">AI Marketplace</span>
       </Link>
 
       {/* ── Centered Tabs ────────────────────────────── */}
