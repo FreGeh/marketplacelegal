@@ -6,7 +6,7 @@ export default function Home() {
       <h1 className="bg-gradient-to-br from-black to-stone-600 bg-clip-text font-display text-5xl leading-snug font-extrabold tracking-tight text-transparent md:text-7xl md:leading-snug">
         KI-gestützte Rechts-Apps<br />für den Mittelstand
       </h1>
-      <p className="max-w-2xl text-lg text-muted-foreground">
+      <p className="max-w-2xl text-2xl text-muted-foreground">
         Automatisieren Sie jegliche aufwendige Rechtsaufgaben mit von Fach­anwälten mitentwickelten Apps
         – die sofort in Ihrer bestehenden IT-Landschaft einsatzbereit sind.
       </p>
@@ -14,7 +14,7 @@ export default function Home() {
         <Link
           href="/catalog"
           className="inline-flex w-full sm:w-auto items-center justify-center
-               rounded-md bg-indigo-600 px-6 py-3 text-sm font-medium
+               rounded-md bg-indigo-600 px-6 py-3 text-lg font-medium
                text-white shadow transition hover:bg-indigo-700 focus:outline-none
                focus-visible:ring focus-visible:ring-indigo-400"
         >
@@ -24,7 +24,7 @@ export default function Home() {
         <Link
           href="/catalog"
           className="inline-flex w-full sm:w-auto items-center justify-center
-               rounded-md bg-indigo-200 px-6 py-3 text-sm font-medium
+               rounded-md bg-indigo-200 px-6 py-3 text-lg font-medium
                text-white shadow transition hover:bg-indigo-400 focus:outline-none
                focus-visible:ring focus-visible:ring-indigo-100"
         >
@@ -34,7 +34,7 @@ export default function Home() {
         <Link
           href="/catalog"
           className="inline-flex w-full sm:w-auto items-center justify-center
-               rounded-md bg-indigo-200 px-6 py-3 text-sm font-medium
+               rounded-md bg-indigo-200 px-6 py-3 text-lg font-medium
                text-white shadow transition hover:bg-indigo-400 focus:outline-none
                focus-visible:ring focus-visible:ring-indigo-100"
         >
@@ -45,13 +45,13 @@ export default function Home() {
       <div className="flex flex-wrap justify-center gap-4">
         <Link
           href="/catalog"
-          className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-black shadow hover:bg-primary/90"
+          className="rounded-md bg-primary px-6 py-3 text-xl font-medium text-black shadow hover:bg-primary/90"
         >
           Apps entdecken
         </Link>
         <Link
           href="/pricing"
-          className="rounded-md border border-input px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
+          className="rounded-md border border-input px-6 py-3 text-xl font-medium transition-colors hover:bg-accent"
         >
           Preise & Pakete
         </Link>
