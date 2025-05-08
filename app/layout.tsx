@@ -29,7 +29,7 @@ export default function RootLayout({
 
           {/* Footer (optional) */}
           <footer className="border-t py-8 text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} LegalAI GmbH. All rights reserved.
+            © {new Date().getFullYear()} Frederick Gehm
           </footer>
         </body>
       </html>

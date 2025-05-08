@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section className="container mx-auto flex flex-col items-center gap-8 px-5 py-24 text-center">
-      <h1 className="bg-gradient-to-br from-black to-stone-600 bg-clip-text font-display text-5xl leading-snug font-extrabold tracking-tight text-transparent md:text-7xl">
+      <h1 className="bg-gradient-to-br from-black to-stone-600 bg-clip-text font-display text-5xl leading-snug font-extrabold tracking-tight text-transparent md:text-7xl md:leading-snug">
         AI-powered legal tools, one click away
       </h1>
       <p className="max-w-2xl text-lg text-muted-foreground">
