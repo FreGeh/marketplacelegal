@@ -26,7 +26,7 @@ export default function MainNav({
       )}
     >
       {/* ── Logo / Brand ─────────────────────────────── */}
-      <Link href="/" className="font-display text-lg font-bold">
+      <Link href="/" className="font-display text-xl font-bold">
         Rechts<span className="text-primary">KI Marktplatz</span>
       </Link>
 
@@ -36,7 +36,7 @@ export default function MainNav({
           <li key={href}>
             <Link
               href={href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {label}
             </Link>
@@ -48,7 +48,7 @@ export default function MainNav({
       <div className="flex items-center gap-3">
         <SignedOut>
           <SignInButton mode="modal">
-            <button className="rounded-md bg-primary px-4 py-2 text-sm text-black shadow hover:bg-primary/90">
+            <button className="rounded-md bg-primary px-4 py-2 text-lg text-black shadow hover:bg-primary/90">
               Sign in
             </button>
           </SignInButton>
