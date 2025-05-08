@@ -50,7 +50,10 @@ export default function MainNav({
                     <UserButton />
                 </SignedIn>
                 <SignedOut>
-                    <SignInButton />
+                    <SignInButton mode="modal">
+                        <button className="rounded-md bg-primary px-4 py-2 text-lg text-black shadow hover:bg-primary/90">
+                        </button>
+                    </SignInButton>
                 </SignedOut>
             </div>
         </nav>
