@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 import { cn } from "@/lib/utils";
+import { LayoutDashboard } from "lucide-react";
+
 
 const links = [
     { href: "/katalog", label: "Katalog" },
@@ -47,7 +49,15 @@ export default function MainNav({
             {/* ── Auth buttons ─────────────────────────────── */}
             <div className="flex items-center gap-3">
                 <SignedIn>
-                    <UserButton />
+                    <UserButton>
+                        <UserButton.MenuItems>
+                            <UserButton.Link
+                                label="Dashboard"
+                                labelIcon={<LayoutDashboard className="h-4 w-4" />}
+                                href="/dashboard"
+                            />
+                        </UserButton.MenuItems>
+                    </UserButton>
                 </SignedIn>
                 <SignedOut>
                     <SignInButton mode="modal">
