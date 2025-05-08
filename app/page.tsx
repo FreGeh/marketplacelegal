@@ -14,9 +14,9 @@ export default function Home() {
         <Link
           href="/catalog"
           className="inline-flex w-full sm:w-auto items-center justify-center
-               rounded-md bg-indigo-600 px-6 py-3 text-lg font-medium
-               text-white shadow transition hover:bg-indigo-700 focus:outline-none
-               focus-visible:ring focus-visible:ring-indigo-400"
+               rounded-md bg-indigo-500 px-6 py-3 text-lg font-medium
+               text-white shadow transition hover:bg-indigo-600 focus:outline-none
+               focus-visible:ring focus-visible:ring-indigo-300"
         >
           🚀 Verträge automatisieren
         </Link>
@@ -24,9 +24,9 @@ export default function Home() {
         <Link
           href="/catalog"
           className="inline-flex w-full sm:w-auto items-center justify-center
-               rounded-md bg-indigo-200 px-6 py-3 text-lg font-medium
-               text-white shadow transition hover:bg-indigo-400 focus:outline-none
-               focus-visible:ring focus-visible:ring-indigo-100"
+               rounded-md bg-indigo-500 px-6 py-3 text-lg font-medium
+               text-white shadow transition hover:bg-indigo-600 focus:outline-none
+               focus-visible:ring focus-visible:ring-indigo-300"
         >
           🔒 Compliance & DSGVO meistern
         </Link>
@@ -34,11 +34,11 @@ export default function Home() {
         <Link
           href="/catalog"
           className="inline-flex w-full sm:w-auto items-center justify-center
-               rounded-md bg-indigo-200 px-6 py-3 text-lg font-medium
-               text-white shadow transition hover:bg-indigo-400 focus:outline-none
-               focus-visible:ring focus-visible:ring-indigo-100"
+               rounded-md bg-indigo-500 px-6 py-3 text-lg font-medium
+               text-white shadow transition hover:bg-indigo-600 focus:outline-none
+               focus-visible:ring focus-visible:ring-indigo-300"
         >
-          👥 HR rechtssicher gestalten
+          💬 HR rechtssicher gestalten
         </Link>
       </div>
 
