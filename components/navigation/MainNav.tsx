@@ -5,11 +5,11 @@ import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "/catalog", label: "Catalog" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/resources", label: "Resources" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/docs", label: "Documentation" },
+  { href: "/catalog", label: "Katalog" },
+  { href: "/solutions", label: "Lösungen" },
+  { href: "/resources", label: "Ressourcen" },
+  { href: "/pricing", label: "Preise & Pakete" },
+  { href: "/docs", label: "Dokumentation" },
 ];
 
 /* optional: pass `className`, `orientation` props to reuse in footer */
@@ -27,7 +27,7 @@ export default function MainNav({
     >
       {/* ── Logo / Brand ─────────────────────────────── */}
       <Link href="/" className="font-display text-lg font-bold">
-        Legal<span className="text-primary">AI Marketplace</span>
+        Rechts<span className="text-primary">KI Marktplatz</span>
       </Link>
 
       {/* ── Centered Tabs ────────────────────────────── */}

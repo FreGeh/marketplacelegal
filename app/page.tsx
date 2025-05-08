@@ -7,7 +7,7 @@ export default function Home() {
         KI-gestützte Rechts-Apps<br />für den Mittelstand
       </h1>
       <p className="max-w-2xl text-2xl text-muted-foreground">
-        Automatisieren Sie jegliche aufwendige Rechtsaufgaben mit von Fach­anwälten mitentwickelten Apps
+        Automatisieren Sie jegliche aufwendigen Rechtsaufgaben mit von Fach­anwälten mitentwickelten Apps
         – die sofort in Ihrer bestehenden IT-Landschaft einsatzbereit sind.
       </p>
       <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center sm:gap-4">
