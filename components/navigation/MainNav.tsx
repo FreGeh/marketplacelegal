@@ -5,10 +5,10 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 import { cn } from "@/lib/utils";
 
 const links = [
-    { href: "/catalog", label: "Katalog" },
-    { href: "/solutions", label: "Lösungen" },
-    { href: "/resources", label: "Ressourcen" },
-    { href: "/pricing", label: "Preise & Pakete" },
+    { href: "/katalog", label: "Katalog" },
+    { href: "/loesungen", label: "Lösungen" },
+    { href: "/ressourcen", label: "Ressourcen" },
+    { href: "/preise", label: "Preise & Pakete" },
     { href: "/docs", label: "Dokumentation" },
 ];
 
@@ -52,7 +52,7 @@ export default function MainNav({
                 <SignedOut>
                     <SignInButton mode="modal">
                         <button className="rounded-md bg-primary px-4 py-2 text-lg text-black shadow hover:bg-primary/90">
-                            Sign in
+                            Einloggen
                         </button>
                     </SignInButton>
                 </SignedOut>
