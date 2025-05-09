@@ -7,11 +7,11 @@ import { LayoutDashboard } from "lucide-react";
 
 
 const links = [
-    { href: "/katalog", label: "Katalog" },
-    { href: "/loesungen", label: "Lösungen" },
-    { href: "/ressourcen", label: "Ressourcen" },
-    { href: "/preise", label: "Preise & Pakete" },
-    { href: "/docs", label: "Dokumentation" },
+  { href: "/katalog", label: "Chat" },
+  { href: "/ressourcen", label: "Ressourcen" },
+  { href: "/partner", label: "Partner" },
+  { href: "/preise", label: "Preise" },
+  { href: "/docs", label: "Dokumentation" },
 ];
 
 /* optional: pass `className`, `orientation` props to reuse in footer */
