@@ -7,7 +7,8 @@ import { LayoutDashboard } from "lucide-react";
 
 
 const links = [
-  { href: "/katalog", label: "Chat" },
+  { href: "/chat", label: "Chat" },
+  { href: "/apps", label: "Apps" },
   { href: "/ressourcen", label: "Ressourcen" },
   { href: "/partner", label: "Partner" },
   { href: "/preise", label: "Preise" },
