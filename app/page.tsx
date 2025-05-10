@@ -15,7 +15,99 @@ export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const mockResponses: ReactNode[] = [
-    /* …hier deine NDA‑Mock‑Antwort 1 & 2 … */
+    // 1. Frage: Worauf muss ich bei einer NDA achten?
+    <>
+      <p>
+        Beim Prüfen einer <strong>NDA</strong> Ihres Autoherstellers sollten Sie
+        vor allem auf diese Punkte achten:
+      </p>
+      <ul className="ml-4 list-inside list-disc">
+        <li>
+          <strong>Definition vertraulicher Informationen</strong> – Ist klar,
+          welche Daten oder Dokumente geschützt sind?
+        </li>
+        <li>
+          <strong>Laufzeit und Geltungsbereich</strong> – Für welchen Zeitraum
+          und in welchen Ländern gilt die Geheimhaltung?
+        </li>
+        <li>
+          <strong>Ausnahmen</strong> – Welche Informationen (z. B. bereits
+          öffentlich bekannt) sind von der Vertraulichkeit ausgenommen?
+        </li>
+        <li>
+          <strong>Rückgabe-/Vernichtungspflichten</strong> – Wie und wann müssen
+          Unterlagen nach Vertragsende vernichtet oder zurückgegeben werden?
+        </li>
+        <li>
+          <strong>Haftung und Schadensersatz</strong> – Welche Haftungsgrenzen
+          gelten, und welche Konsequenzen drohen bei Verstößen?
+        </li>
+      </ul>
+      <p className="mt-2">
+        Um Ihre Anfrage präzise zu bearbeiten, beantworten Sie mir bitte kurz:
+      </p>
+      <ul className="ml-4 list-inside list-disc">
+        <li>
+          Welche <strong>Informationen</strong> (z. B. technische Zeichnungen,
+          Prozessdaten) sollen geschützt werden?
+        </li>
+        <li>
+          An wen (<strong>Abteilung</strong>, Lieferant, externes Team) werden
+          die Informationen übermittelt?
+        </li>
+        <li>
+          Für welchen <strong>Zeitraum</strong> soll die Geheimhaltung gelten?
+        </li>
+      </ul>
+    </>,
+
+    // 2. Frage: Umsetzung Autozulieferer + Empfehlung NDACheck
+    <>
+      <p>
+        Sie möchten also Ihre <strong>technischen Zeichnungen</strong> und
+        <strong>Prozessdaten</strong> für <strong>3 Jahre</strong> an die
+        Entwicklungsabteilung übermitteln. Wir prüfen nun:
+      </p>
+      <ul className="ml-4 list-inside list-disc">
+        <li>
+          Ist der Zeitraum „<strong>3 Jahre ab Unterzeichnung</strong>“ klar und
+          unwiderruflich formuliert?
+        </li>
+        <li>
+          Werden Ihre Zeichnungen und Daten unter „
+          <strong>vertrauliche Informationen</strong>“ explizit aufgelistet?
+        </li>
+        <li>
+          Sind Ausnahmen (z. B. bereits öffentlich bekannte Entwicklungen)
+          eindeutig definiert?
+        </li>
+        <li>
+          Sind Rückgabe- und Löschpflichten nach Ende der Zusammenarbeit
+          praktikabel und rechtssicher geregelt?
+        </li>
+        <li>Passen die Haftungsgrenzen für Datenverlust und Fehlverwendung?</li>
+      </ul>
+      <p className="mt-2">
+        Unser Tool <strong>NDACheck</strong> markiert diese Punkte direkt farbig
+        und liefert maßgeschneiderte Formulierungsvorschläge.
+      </p>
+      <div className="mt-4 flex items-start gap-3 rounded-lg border-l-4 border-blue-500 bg-blue-50 p-4 text-blue-700">
+        <FileText className="h-6 w-6" />
+        <div>
+          <p className="text-lg font-semibold">Empfohlen: NDACheck</p>
+          <p className="text-sm">
+            Automatisierte Analyse und Anpassung Ihrer
+            Geheimhaltungsvereinbarungen.
+          </p>
+          <a
+            href="/loesungen/nda-check"
+            className="mt-2 inline-flex items-center gap-1 rounded-md bg-blue-500 px-3 py-1 font-medium text-white hover:bg-blue-600"
+          >
+            NDACheck öffnen →
+          </a>
+        </div>
+      </div>
+    </>,
   ];
 
   /* Auto‑Scroll bei neuer Nachricht */
@@ -96,7 +188,7 @@ export default function Home() {
           Rechts&nbsp;AI <br /> für den Mittelstand
         </h1>
         <p className="text-muted-foreground max-w-2xl text-2xl">
-          Sofortige Problemlösungen per KI‑Apps – bei Spezialfragen
+          Sofortige Problemlösungen per KI‑Apps – bei komplizierten Problemen
           unkompliziert mit Top‑Fachanwälten vernetzt.
         </p>
       </section>
