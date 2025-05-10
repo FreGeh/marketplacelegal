@@ -19,76 +19,92 @@ export default function ChatPage() {
     // 1. Antwort: Was ist wichtig bei der NDA-Prüfung + gezielte Rückfragen
     <>
       <p>
-        Beim Prüfen eines <strong>NDA</strong> sollten Sie vor allem auf diese
-        Punkte achten:
+        Beim Prüfen einer <strong>NDA</strong> Ihres Autoherstellers sollten Sie
+        vor allem auf diese Punkte achten:
       </p>
       <ul className="ml-4 list-inside list-disc">
         <li>
           <strong>Definition vertraulicher Informationen</strong> – Ist klar,
-          was konkret geschützt wird?
+          welche Daten oder Dokumente geschützt sind?
         </li>
         <li>
           <strong>Laufzeit und Geltungsbereich</strong> – Für welchen Zeitraum
-          und welche Länder gilt die Vertraulichkeit?
+          und in welchen Ländern gilt die Geheimhaltung?
         </li>
         <li>
-          <strong>Ausnahmen</strong> – Welche Informationen sind ausdrücklich
-          von der Vertraulichkeit ausgenommen?
+          <strong>Ausnahmen</strong> – Welche Informationen (z. B. bereits
+          öffentlich bekannt) sind von der Vertraulichkeit ausgenommen?
         </li>
         <li>
-          <strong>Rückgabe-/Vernichtungspflichten</strong> – Was muss mit den
-          Unterlagen nach Vertragsende passieren?
+          <strong>Rückgabe-/Vernichtungspflichten</strong> – Wie und wann müssen
+          Unterlagen nach Vertragsende vernichtet oder zurückgegeben werden?
         </li>
         <li>
-          <strong>Haftung und Schadensersatz</strong> – Bei welchem Schaden
-          haftet wer in welchem Umfang?
+          <strong>Haftung und Schadensersatz</strong> – Welche Haftungsgrenzen
+          gelten, und welche Konsequenzen drohen bei Verstößen?
         </li>
       </ul>
       <p className="mt-2">
-        Um die Analyse zu spezifizieren, beantworten Sie mir bitte kurz:
+        Um Ihre Anfrage präzise zu bearbeiten, beantworten Sie mir bitte kurz:
       </p>
       <ul className="ml-4 list-inside list-disc">
-        <li>Wen möchten Sie schützen (z.B. Ihr Know-how, Kundendaten)?</li>
-        <li>Wer erhält die Infos (Partner, Lieferant, Mitarbeiter)?</li>
-        <li>Wie lange soll die Geheimhaltung gelten?</li>
+        <li>
+          Welche <strong>Informationen</strong> (z. B. technische Zeichnungen,
+          Prozessdaten) sollen geschützt werden?
+        </li>
+        <li>
+          An wen (<strong>Abteilung</strong>, Lieferant, externes Team) werden
+          die Informationen übermittelt?
+        </li>
+        <li>
+          Für welchen <strong>Zeitraum</strong> soll die Geheimhaltung gelten?
+        </li>
       </ul>
     </>,
 
     // 2. Antwort: Auswertung der Nutzer-Angaben + Empfehlung NDACheck
     <>
       <p>
-        Basierend auf Ihrer Angabe, dass Sie <strong>Kundendaten</strong>
-        für <strong>3 Jahre</strong> an Ihren <strong>Lieferanten</strong>{" "}
-        weitergeben möchten, prüfen wir:
+        Sie möchten also Ihre <strong>technischen Zeichnungen</strong> und
+        <strong>Prozessdaten</strong> für <strong>3 Jahre</strong> an die
+        Entwicklungsabteilung übermitteln. Wir prüfen nun:
       </p>
       <ul className="ml-4 list-inside list-disc">
         <li>
-          Korrekte Formulierung des Zeitraums („3 Jahre ab Vertragsschluss“)
+          Ist der Zeitraum „<strong>3 Jahre ab Unterzeichnung</strong>“ klar und
+          unwiderruflich formuliert?
         </li>
-        <li>Deckung Ihres Datenumfangs unter „vertrauliche Informationen“</li>
-        <li>Ausreichende Ausnahmen für bereits öffentlich bekannte Daten</li>
         <li>
-          Verbindliche Rückgabe-/Löschpflicht nach Ende der Zusammenarbeit
+          Werden Ihre Zeichnungen und Daten unter „
+          <strong>vertrauliche Informationen</strong>“ explizit aufgelistet?
         </li>
-        <li>Angemessene Haftungsgrenzen bei Datenverlust</li>
+        <li>
+          Sind Ausnahmen (z. B. bereits öffentlich bekannte Entwicklungen)
+          eindeutig definiert?
+        </li>
+        <li>
+          Sind Rückgabe- und Löschpflichten nach Ende der Zusammenarbeit
+          praktikabel und rechtssicher geregelt?
+        </li>
+        <li>Passen die Haftungsgrenzen für Datenverlust und Fehlverwendung?</li>
       </ul>
       <p className="mt-2">
-        Unser Tool <strong>NDACheck</strong> markiert Ihnen diese Stellen direkt
-        farbig und liefert präzise Anpassungsvorschläge.
+        Unser Tool <strong>NDACheck</strong> markiert diese Punkte direkt farbig
+        und liefert maßgeschneiderte Formulierungsvorschläge.
       </p>
       <div className="mt-4 flex items-start gap-3 rounded-lg border-l-4 border-blue-500 bg-blue-50 p-4 text-blue-700">
         <FileText className="h-6 w-6" />
         <div>
           <p className="text-lg font-semibold">Empfohlen: NDACheck</p>
           <p className="text-sm">
-            Automatisierte Analyse & Anpassung von
-            Geheimhaltungs­vereinbarungen.
+            Automatisierte Analyse und Anpassung Ihrer
+            Geheimhaltungsvereinbarungen.
           </p>
           <a
             href="/loesungen/nda-check"
             className="mt-2 inline-flex items-center gap-1 rounded-md bg-blue-500 px-3 py-1 font-medium text-white hover:bg-blue-600"
           >
-            NDACheck öffnen &rarr;
+            NDACheck öffnen →
           </a>
         </div>
       </div>
