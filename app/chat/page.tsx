@@ -1,22 +1,12 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, ReactNode } from "react";
 
 type Message = {
   id: number;
   role: "user" | "bot";
-  content: string;
+  content: ReactNode;
 };
-
-const PRESET_ANSWER = `Hier ein einfaches Praktikumsvertrags-Muster:
-
-1. Vertragsparteien …  
-2. Beginn & Dauer …  
-3. Vergütung …  
-4. Vertraulichkeit …  
-5. Kündigung …  
-(⚠️ Platzhalter – kein Rechtsrat)
-`;
 
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -26,29 +16,61 @@ export default function ChatPage() {
     e.preventDefault();
     if (!input.trim()) return;
 
-    // Create user message
     const userMsg: Message = {
       id: Date.now(),
       role: "user",
       content: input.trim(),
     };
 
-    // Create a “thinking” placeholder
     const thinkingMsg: Message = {
       id: Date.now() + 1,
       role: "bot",
-      content: "Denke nach…",
+      content: "Denkt nach…",
     };
 
-    // Append both to the chat
     setMessages((prev) => [...prev, userMsg, thinkingMsg]);
     setInput("");
 
-    // After a delay, replace the thinking placeholder
     setTimeout(() => {
       setMessages((prev) =>
         prev.map((msg) =>
-          msg.id === thinkingMsg.id ? { ...msg, content: PRESET_ANSWER } : msg,
+          msg.id === thinkingMsg.id
+            ? {
+                ...msg,
+                content: (
+                  <>
+                    <p>Verträge bergen oft versteckte Fallstricke:</p>
+                    <ul className="ml-4 list-inside list-disc">
+                      <li>unklare Leistungsbeschreibungen</li>
+                      <li>widersprüchliche Laufzeiten</li>
+                      <li>
+                        automatische Verlängerungen ohne klare Kündigungsrechte
+                      </li>
+                      <li>intransparente Preis- und Zahlungsmodalitäten</li>
+                      <li>
+                        übermäßige Haftungs- und Gewährleistungsausschlüsse
+                        sowie unzulässige AGB-Klauseln
+                      </li>
+                    </ul>
+                    <p className="mt-2">
+                      Fehlende Formvorschriften – etwa Unterschrift, Datum oder
+                      notarielle Beurkundung – können die Wirksamkeit gefährden.
+                    </p>
+                    <p>
+                      Achten Sie darauf, dass alle Parteien korrekt benannt und
+                      vertretungsberechtigt sind und keine Klauseln gegen
+                      zwingendes Recht oder gute Sitten verstoßen.
+                    </p>
+                    <p className="mt-2">
+                      Eine klare, verständliche Sprache und eine konsistente
+                      Gesamtauslegung minimieren späteren Streit. So gewinnen
+                      Sie bereits vor Unterschrift die nötige Klarheit und
+                      Rechtssicherheit.
+                    </p>
+                  </>
+                ),
+              }
+            : msg,
         ),
       );
     }, 2000);
@@ -58,18 +80,15 @@ export default function ChatPage() {
     <section className="container mx-auto flex h-[calc(100vh-120px)] max-w-3xl flex-col gap-4 p-4">
       <h2 className="text-3xl font-semibold">Chat</h2>
 
-      {/* Message list */}
       <div className="flex-1 overflow-y-auto rounded-md border p-4">
         {messages.length === 0 && (
-          <p className="text-sm text-gray-500">
-            Stelle deine Frage – die Antwort ist bereits vorbereitet.
-          </p>
+          <p className="text-sm text-gray-500">Stelle LegalLexi deine Frage:</p>
         )}
 
         {messages.map((msg) => (
           <div
             key={msg.id}
-            className={`mb-3 whitespace-pre-line rounded-md p-3 text-sm ${
+            className={`mb-3 whitespace-pre-wrap rounded-md p-3 text-sm ${
               msg.role === "user"
                 ? "ml-auto bg-indigo-500 text-white"
                 : "mr-auto bg-gray-200 text-gray-800"
@@ -80,7 +99,6 @@ export default function ChatPage() {
         ))}
       </div>
 
-      {/* Input */}
       <form onSubmit={handleSubmit} className="flex gap-2">
         <input
           type="text"
