@@ -2,7 +2,7 @@
 "use client";
 
 import { FormEvent, useState, ReactNode, useRef, useEffect } from "react";
-import { Mic2, FileText, Lock, BookOpen, Briefcase } from "lucide-react";
+import { Mic2, FileText, Lock, BookOpen, Briefcase, MoreHorizontal } from "lucide-react";
 import Link from "next/link";
 
 type Message = { id: number; role: "user" | "bot"; content: ReactNode };
@@ -216,9 +216,12 @@ export default function Home() {
         \
         <Link
           href="/marktplatz"
-          className="bg-primary hover:bg-primary/90 rounded-md px-6 py-3 text-xl font-medium text-black shadow"
+          className="flex transform flex-col items-center justify-center rounded-2xl border-2
+             border-dashed border-indigo-200 bg-indigo-50/50 p-6 text-indigo-600
+             transition hover:scale-105 hover:shadow-lg"
         >
-          Andere Apps entdecken
+          <MoreHorizontal className="mb-3 h-10 w-10" />
+          <p className="text-lg font-semibold">Weitere Apps entdecken</p>
         </Link>
       </section>
 
