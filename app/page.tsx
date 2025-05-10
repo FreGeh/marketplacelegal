@@ -192,14 +192,8 @@ export default function Home() {
           unkompliziert mit Top‑Fachanwälten vernetzt.
         </p>
       </section>
-
       {/* KI‑App‑Katalog */}
       <section className="container mx-auto mb-40 px-6">
-        {" "}
-        {/*  mb‑40 lässt Platz für Chat‑Fenster */}
-        <h2 className="mb-8 text-center text-3xl font-bold">
-          KI‑App Marktplatz
-        </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map(({ href, label, icon, color, description }) => (
             <Link
