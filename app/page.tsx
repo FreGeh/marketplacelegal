@@ -2,13 +2,20 @@
 "use client";
 
 import { FormEvent, useState, ReactNode, useRef, useEffect } from "react";
-import { Mic2, FileText, Lock, BookOpen, Briefcase, MoreHorizontal } from "lucide-react";
+import {
+  Mic2,
+  FileText,
+  Lock,
+  BookOpen,
+  Briefcase,
+  MoreHorizontal,
+} from "lucide-react";
 import Link from "next/link";
 
 type Message = { id: number; role: "user" | "bot"; content: ReactNode };
 
 export default function Home() {
-  /* ─────────── Chat‑State ─────────── */
+  /* ── Chat State ───────────── */
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [responseIndex, setResponseIndex] = useState(0);
@@ -110,7 +117,6 @@ export default function Home() {
     </>,
   ];
 
-  /* Auto‑Scroll bei neuer Nachricht */
   useEffect(() => {
     scrollRef.current?.scrollTo({
       top: scrollRef.current.scrollHeight,
@@ -121,7 +127,6 @@ export default function Home() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
-
     const userMsg: Message = {
       id: Date.now(),
       role: "user",
@@ -147,95 +152,104 @@ export default function Home() {
     }, 1200);
   };
 
-  /* ─────────── KI‑App‑Katalog ─────────── */
+  /* ── KI‑Apps ──────────────── */
   const solutions = [
     {
       href: "/loesungen/contractcheck",
       label: "ContractCheck",
-      icon: <FileText className="h-8 w-8" />,
-      color: "bg-indigo-100",
-      description: "Verträge automatisch prüfen & optimieren.",
+      icon: FileText,
+      color: "bg-indigo-50",
+      desc: "Verträge automatisch prüfen & optimieren.",
     },
     {
       href: "/loesungen/nda-check",
       label: "NDACheck",
-      icon: <Lock className="h-8 w-8" />,
-      color: "bg-green-100",
-      description: "Geheimhaltungs­vereinbarungen schnell absichern.",
+      icon: Lock,
+      color: "bg-green-50",
+      desc: "Geheimhaltungs­vereinbarungen schnell absichern.",
     },
     {
       href: "/loesungen/dokumentation-automation",
       label: "Dokumentation Automation",
-      icon: <BookOpen className="h-8 w-8" />,
-      color: "bg-blue-100",
-      description: "Dokumente automatisch erstellen & pflegen.",
+      icon: BookOpen,
+      color: "bg-blue-50",
+      desc: "Dokumente automatisch erstellen & pflegen.",
     },
     {
       href: "/loesungen/case-cockpit",
-      label: "Case Cockpit",
-      icon: <Briefcase className="h-8 w-8" />,
-      color: "bg-yellow-100",
-      description: "Fälle & Projekte zentral managen.",
+      label: "Case Cockpit",
+      icon: Briefcase,
+      color: "bg-yellow-50",
+      desc: "Fälle & Projekte zentral managen.",
     },
   ];
 
-  /* ─────────── Render ─────────── */
+  /* ── Render ──────────────── */
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       {/* Hero */}
-      <section className="container mx-auto flex flex-col items-center justify-center gap-8 px-5 py-24 text-center">
-        <h1 className="bg-gradient-to-br from-black to-stone-600 bg-clip-text text-5xl font-extrabold text-transparent md:text-7xl">
-          Rechts&nbsp;AI <br /> für den Mittelstand
+      <section className="container mx-auto flex flex-col items-center gap-6 px-6 py-24 text-center">
+        <h1 className="bg-gradient-to-br from-black to-stone-700 bg-clip-text text-5xl font-extrabold text-transparent md:text-7xl">
+          Rechts AI
+          <br />
+          für den Mittelstand
         </h1>
-        <p className="text-muted-foreground max-w-2xl text-2xl">
-          Sofortige Problemlösungen per KI‑Apps – bei komplizierten Problemen
-          unkompliziert mit Top‑Fachanwälten vernetzt.
+        <p className="max-w-2xl text-lg text-gray-700 md:text-2xl">
+          Sofortige Problemlösungen per KI‑Apps – bei Spezial­fragen direkt mit
+          Top‑Fach­anwälten vernetzt.
         </p>
       </section>
 
-      {/* KI‑App‑Katalog */}
-      <section className="container mx-auto mb-40 px-6">
-        {" "}
-        {/*  mb‑40 lässt Platz für Chat‑Fenster */}
+      {/* Divider */}
+      <div className="mx-auto h-px w-24 rounded-full bg-indigo-200" />
+
+      {/* KI‑App‑Marktplatz */}
+      <section className="container mx-auto mb-40 px-6 pt-16">
         <h2 className="mb-8 text-center text-3xl font-bold">
-          KI‑App Marktplatz
+          KI‑App Marktplatz
         </h2>
+
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {solutions.map(({ href, label, icon, color, description }) => (
+          {solutions.map(({ href, label, icon: Icon, color, desc }) => (
             <Link
               key={href}
               href={href}
-              className={`${color} flex flex-col rounded-2xl p-6 shadow transition hover:shadow-xl`}
+              className={`${color} flex flex-col rounded-2xl p-6 shadow transition-transform
+                         hover:-translate-y-1 hover:scale-105 hover:shadow-xl`}
             >
-              <div className="mb-4">{icon}</div>
+              <Icon className="mb-4 h-8 w-8 text-indigo-600" />
               <h3 className="mb-2 text-2xl font-semibold">{label}</h3>
-              <p className="text-sm text-gray-700">{description}</p>
+              <p className="text-sm text-gray-700">{desc}</p>
             </Link>
           ))}
+
+          {/* Discover‑Card */}
+          <Link
+            href="/marktplatz"
+            className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed
+                       border-indigo-200 bg-indigo-50/50 p-6 text-indigo-600 transition-transform
+                       hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
+          >
+            <MoreHorizontal className="mb-3 h-10 w-10" />
+            <p className="text-lg font-semibold">Weitere Apps entdecken</p>
+          </Link>
         </div>
-        \
-        <Link
-          href="/marktplatz"
-          className="flex transform flex-col items-center justify-center rounded-2xl border-2
-             border-dashed border-indigo-200 bg-indigo-50/50 p-6 text-indigo-600
-             transition hover:scale-105 hover:shadow-lg"
-        >
-          <MoreHorizontal className="mb-3 h-10 w-10" />
-          <p className="text-lg font-semibold">Weitere Apps entdecken</p>
-        </Link>
       </section>
 
-      {/* Fixiertes Chat‑Fenster (immer sichtbar) */}
+      {/* Chat – fixiert unten */}
       <div className="fixed bottom-0 left-0 right-0 z-40 h-96 border-t bg-white shadow-lg">
         <div className="mx-auto flex h-full max-w-3xl flex-col">
           {/* Header */}
-          <div className="bg-indigo-500 px-6 py-3 text-lg font-semibold text-white">
+          <header className="bg-indigo-500 px-6 py-3 text-lg font-semibold text-white shadow-inner">
             LegalLexi Chat
-          </div>
-          {/* Nachrichten */}
+          </header>
+
+          {/* Messages */}
           <div
             ref={scrollRef}
-            className="flex-1 space-y-3 overflow-y-auto bg-gray-50 p-4"
+            className="flex-1 space-y-3 overflow-y-auto bg-gray-50 p-4
+                       [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-indigo-200
+                       [&::-webkit-scrollbar]:w-2"
           >
             {messages.length === 0 && (
               <p className="italic text-gray-400">
@@ -245,7 +259,7 @@ export default function Home() {
             {messages.map((msg) => (
               <div
                 key={msg.id}
-                className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                className={`max-w-[80%] rounded-lg px-4 py-2 transition-opacity duration-200 ${
                   msg.role === "user"
                     ? "ml-auto bg-indigo-500 text-white"
                     : "mr-auto bg-gray-200 text-gray-800"
@@ -255,10 +269,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {/* Eingabe */}
+
+          {/* Input */}
           <form
             onSubmit={handleSubmit}
-            className="flex items-center gap-3 border-t bg-white px-6 py-4"
+            className="flex items-center gap-3 bg-gray-100 px-6 py-3"
           >
             <input
               type="text"
@@ -275,7 +290,8 @@ export default function Home() {
             </button>
             <button
               type="submit"
-              className="rounded-full bg-indigo-500 px-5 py-2 text-sm font-medium text-white shadow hover:bg-indigo-600"
+              className="rounded-full bg-indigo-500 px-5 py-2 text-sm font-medium text-white shadow
+                         transition hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300"
             >
               Senden
             </button>
