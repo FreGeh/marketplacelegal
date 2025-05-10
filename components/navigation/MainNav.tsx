@@ -29,7 +29,7 @@ export default function MainNav({ className }: { className?: string }) {
     >
       {/* Logo / Brand */}
       <Link href="/" className="font-display text-xl font-bold">
-        Rechts<span className="text-primary">KI Marktplatz</span>
+        <span className="text-primary">LegaLista</span>
       </Link>
 
       {/* Centered Tabs */}
