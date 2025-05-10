@@ -16,8 +16,7 @@ const links = [
   { href: "/marktplatz", label: "Marktplatz" },
   { href: "/ressourcen", label: "Ressourcen" },
   { href: "/partner", label: "Partner" },
-  { href: "/preise", label: "Preise" },
-  { href: "/docs", label: "Dokumentation" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function MainNav({ className }: { className?: string }) {

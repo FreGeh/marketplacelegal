@@ -212,13 +212,14 @@ export default function Home() {
               <p className="text-sm text-gray-700">{description}</p>
             </Link>
           ))}
-          <Link
-            href="/catalog"
-            className="bg-primary hover:bg-primary/90 rounded-md px-6 py-3 text-xl font-medium text-black shadow"
-          >
-            Andere Apps entdecken
-          </Link>
         </div>
+        \
+        <Link
+          href="/marktplatz"
+          className="bg-primary hover:bg-primary/90 rounded-md px-6 py-3 text-xl font-medium text-black shadow"
+        >
+          Andere Apps entdecken
+        </Link>
       </section>
 
       {/* Fixiertes Chat‑Fenster (immer sichtbar) */}
