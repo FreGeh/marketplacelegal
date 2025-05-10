@@ -16,104 +16,84 @@ export default function ChatPage() {
 
   // Definiere hier Deine Mock-Antworten in der gewünschten Reihenfolge
   const mockResponses: ReactNode[] = [
-    // 1. Antwort: Allgemeine Vertrags-Fallstricke + Empfehlung
-    <>
-      <div>
-        <p>
-          Verträge bergen oft versteckte <strong>Fallstricke</strong>:
-        </p>
-        <ul className="ml-4 list-inside list-disc">
-          <li>
-            <strong>unklare Leistungsbeschreibungen</strong>
-          </li>
-          <li>
-            <strong>widersprüchliche Laufzeiten</strong>
-          </li>
-          <li>
-            automatische Verlängerungen ohne klare{" "}
-            <strong>Kündigungsrechte</strong>
-          </li>
-          <li>
-            intransparente <strong>Preis- und Zahlungsmodalitäten</strong>
-          </li>
-          <li>
-            übermäßige <strong>Haftungs- und Gewährleistungsausschlüsse</strong>{" "}
-            sowie <strong>unzulässige AGB-Klauseln</strong>
-          </li>
-        </ul>
-        <p className="mt-2">
-          Fehlende <strong>Formvorschriften</strong> – etwa Unterschrift, Datum
-          oder notarielle Beurkundung – können die Wirksamkeit gefährden.
-        </p>
-        <p>
-          Achten Sie darauf, dass alle Parteien korrekt benannt und{" "}
-          <strong>vertretungsberechtigt</strong> sind und keine Klauseln gegen
-          zwingendes Recht oder gute Sitten verstoßen.
-        </p>
-        <p className="mt-2">
-          Eine klare, verständliche Sprache und eine konsistente{" "}
-          <strong>Gesamtauslegung</strong> minimieren späteren Streit. So
-          gewinnen Sie bereits vor Unterschrift die nötige Klarheit und
-          Rechtssicherheit.
-        </p>
-      </div>
-      <div className="mt-4 flex items-start gap-3 rounded-lg border-l-4 border-indigo-500 bg-indigo-50 p-4 text-indigo-700">
-        <FileText className="h-6 w-6" />
-        <div>
-          <p className="text-lg font-semibold">Empfohlen: ContractCheck</p>
-          <p className="text-sm">
-            Unsere von Rechtsanwälten entwickelte Lösung für Ihre
-            Vertragsprüfung.
-          </p>
-          <a
-            href="/loesungen/contractcheck"
-            className="mt-2 inline-flex items-center gap-1 rounded-md bg-indigo-500 px-3 py-1 font-medium text-white hover:bg-indigo-600"
-          >
-            <FileText className="h-4 w-4" />
-            ContractCheck öffnen
-          </a>
-        </div>
-      </div>
-    </>,
-    // 2. Antwort: Umsetzung bei Autozulieferer
+    // 1. Antwort: Was ist wichtig bei der NDA-Prüfung + gezielte Rückfragen
     <>
       <p>
-        Für einen <strong>Automobilzulieferer</strong> prüfen wir im ersten
-        Schritt Ihre Rahmenverträge mit OEMs und Sub-Tier-Lieferanten auf:
+        Beim Prüfen eines <strong>NDA</strong> sollten Sie vor allem auf diese
+        Punkte achten:
       </p>
       <ul className="ml-4 list-inside list-disc">
         <li>
-          Technische Spezifikationen (z. B. Toleranzen, Oberflächenbehandlungen)
+          <strong>Definition vertraulicher Informationen</strong> – Ist klar,
+          was konkret geschützt wird?
         </li>
-        <li>Lieferfristen und Nachschubklauseln (JIT- Anforderungen)</li>
-        <li>Qualitätssicherung &amp; Mängelhaftung (PPAP, Garantiefristen)</li>
+        <li>
+          <strong>Laufzeit und Geltungsbereich</strong> – Für welchen Zeitraum
+          und welche Länder gilt die Vertraulichkeit?
+        </li>
+        <li>
+          <strong>Ausnahmen</strong> – Welche Informationen sind ausdrücklich
+          von der Vertraulichkeit ausgenommen?
+        </li>
+        <li>
+          <strong>Rückgabe-/Vernichtungspflichten</strong> – Was muss mit den
+          Unterlagen nach Vertragsende passieren?
+        </li>
+        <li>
+          <strong>Haftung und Schadensersatz</strong> – Bei welchem Schaden
+          haftet wer in welchem Umfang?
+        </li>
       </ul>
       <p className="mt-2">
-        ContractCheck markiert diese Punkte automatisch:
-        <strong>Blau</strong> für Specs, <strong>Gelb</strong> für Termine,{" "}
-        <strong>Rot</strong> für Haftungsrisiken. So sehen Ihre Einkäufer und
-        Juristen sofort, wo Handlungsbedarf besteht.
+        Um die Analyse zu spezifizieren, beantworten Sie mir bitte kurz:
       </p>
-      <div className="mt-4 flex items-start gap-3 rounded-lg border-l-4 border-green-500 bg-green-50 p-4 text-green-700">
+      <ul className="ml-4 list-inside list-disc">
+        <li>Wen möchten Sie schützen (z.B. Ihr Know-how, Kundendaten)?</li>
+        <li>Wer erhält die Infos (Partner, Lieferant, Mitarbeiter)?</li>
+        <li>Wie lange soll die Geheimhaltung gelten?</li>
+      </ul>
+    </>,
+
+    // 2. Antwort: Auswertung der Nutzer-Angaben + Empfehlung NDACheck
+    <>
+      <p>
+        Basierend auf Ihrer Angabe, dass Sie <strong>Kundendaten</strong>
+        für <strong>3 Jahre</strong> an Ihren <strong>Lieferanten</strong>{" "}
+        weitergeben möchten, prüfen wir:
+      </p>
+      <ul className="ml-4 list-inside list-disc">
+        <li>
+          Korrekte Formulierung des Zeitraums („3 Jahre ab Vertragsschluss“)
+        </li>
+        <li>Deckung Ihres Datenumfangs unter „vertrauliche Informationen“</li>
+        <li>Ausreichende Ausnahmen für bereits öffentlich bekannte Daten</li>
+        <li>
+          Verbindliche Rückgabe-/Löschpflicht nach Ende der Zusammenarbeit
+        </li>
+        <li>Angemessene Haftungsgrenzen bei Datenverlust</li>
+      </ul>
+      <p className="mt-2">
+        Unser Tool <strong>NDACheck</strong> markiert Ihnen diese Stellen direkt
+        farbig und liefert präzise Anpassungsvorschläge.
+      </p>
+      <div className="mt-4 flex items-start gap-3 rounded-lg border-l-4 border-blue-500 bg-blue-50 p-4 text-blue-700">
         <FileText className="h-6 w-6" />
         <div>
-          <p className="text-lg font-semibold">
-            Empfohlen: ContractCheck Automotive
-          </p>
+          <p className="text-lg font-semibold">Empfohlen: NDACheck</p>
           <p className="text-sm">
-            Speziell angepasst auf die Anforderungen der Automobilbranche.
+            Automatisierte Analyse & Anpassung von
+            Geheimhaltungs­vereinbarungen.
           </p>
           <a
-            href="/loesungen/contractcheck"
-            className="mt-2 inline-flex items-center gap-1 rounded-md bg-green-500 px-3 py-1 font-medium text-white hover:bg-green-600"
+            href="/loesungen/nda-check"
+            className="mt-2 inline-flex items-center gap-1 rounded-md bg-blue-500 px-3 py-1 font-medium text-white hover:bg-blue-600"
           >
-            <FileText className="h-4 w-4" />
-            Mehr erfahren →
+            NDACheck öffnen &rarr;
           </a>
         </div>
       </div>
     </>,
-    // Füge hier beliebig weitere Antworten an Index 2, 3, ...
+    // … weitere Antworten …
   ];
 
   const handleSubmit = (e: FormEvent) => {
