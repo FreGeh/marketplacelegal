@@ -213,6 +213,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        
         <Link
           href="/marktplatz"
           className="flex transform flex-col items-center justify-center rounded-2xl border-2
