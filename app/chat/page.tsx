@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState, ReactNode } from "react";
-import { Mic2 } from "lucide-react";
+import { Mic2, FileText } from "lucide-react";
 
 type Message = {
   id: number;
@@ -41,49 +41,69 @@ export default function ChatPage() {
                 content: (
                   <>
                     <div>
-                      <p>Verträge bergen oft versteckte Fallstricke:</p>
+                      <p>
+                        Verträge bergen oft versteckte{" "}
+                        <strong>Fallstricke</strong>:
+                      </p>
                       <ul className="ml-4 list-inside list-disc">
-                        <li>unklare Leistungsbeschreibungen</li>
-                        <li>widersprüchliche Laufzeiten</li>
+                        <li>
+                          <strong>unklare Leistungsbeschreibungen</strong>
+                        </li>
+                        <li>
+                          <strong>widersprüchliche Laufzeiten</strong>
+                        </li>
                         <li>
                           automatische Verlängerungen ohne klare
-                          Kündigungsrechte
+                          <strong>Kündigungsrechte</strong>
                         </li>
-                        <li>intransparente Preis- und Zahlungsmodalitäten</li>
                         <li>
-                          übermäßige Haftungs- und Gewährleistungsausschlüsse
-                          sowie unzulässige AGB-Klauseln
+                          intransparente
+                          <strong>Preis- und Zahlungsmodalitäten</strong>
+                        </li>
+                        <li>
+                          übermäßige
+                          <strong>
+                            Haftungs- und Gewährleistungsausschlüsse
+                          </strong>
+                          sowie <strong>unzulässige AGB-Klauseln</strong>
                         </li>
                       </ul>
                       <p className="mt-2">
-                        Fehlende Formvorschriften – etwa Unterschrift, Datum
-                        oder notarielle Beurkundung – können die Wirksamkeit
-                        gefährden.
+                        Fehlende <strong>Formvorschriften</strong> – etwa
+                        Unterschrift, Datum oder notarielle Beurkundung – können
+                        die Wirksamkeit gefährden.
                       </p>
                       <p>
                         Achten Sie darauf, dass alle Parteien korrekt benannt
-                        und vertretungsberechtigt sind und keine Klauseln gegen
-                        zwingendes Recht oder gute Sitten verstoßen.
+                        und <strong>vertretungsberechtigt</strong> sind und
+                        keine Klauseln gegen zwingendes Recht oder gute Sitten
+                        verstoßen.
                       </p>
                       <p className="mt-2">
-                        Eine klare, verständliche Sprache und eine konsistente
-                        Gesamtauslegung minimieren späteren Streit. So gewinnen
-                        Sie bereits vor Unterschrift die nötige Klarheit und
-                        Rechtssicherheit.
+                        Eine klare, verständliche Sprache und eine konsistente{" "}
+                        <strong>Gesamtauslegung</strong> minimieren späteren
+                        Streit. So gewinnen Sie bereits vor Unterschrift die
+                        nötige Klarheit und Rechtssicherheit.
                       </p>
                     </div>
-                    <div className="mt-2 rounded-md border-l-4 border-indigo-500 bg-indigo-50 p-3 text-indigo-700">
-                      <p className="font-semibold">Empfohlen: ContractCheck</p>
-                      <p className="text-sm">
-                        Unsere von Rechtsanwälten entwickelte Lösung für Ihre
-                        Vertragsprüfung.
-                      </p>
-                      <a
-                        href="/contract-check"
-                        className="mt-1 inline-block font-medium hover:underline"
-                      >
-                        Jetzt entdecken &rarr;
-                      </a>
+                    <div className="mt-4 flex items-start gap-3 rounded-lg border-l-4 border-indigo-500 bg-indigo-50 p-4 text-indigo-700">
+                      <FileText className="h-6 w-6" />
+                      <div>
+                        <p className="text-lg font-semibold">
+                          Empfohlen: ContractCheck
+                        </p>
+                        <p className="text-sm">
+                          Unsere von Rechtsanwälten entwickelte Lösung für Ihre
+                          Vertragsprüfung.
+                        </p>
+                        <a
+                          href="/contract-check"
+                          className="mt-2 inline-flex items-center gap-1 rounded-md bg-indigo-500 px-3 py-1 font-medium text-white hover:bg-indigo-600"
+                        >
+                          <FileText className="h-4 w-4" />
+                          ContractCheck öffnen
+                        </a>
+                      </div>
                     </div>
                   </>
                 ),
@@ -100,7 +120,9 @@ export default function ChatPage() {
 
       <div className="flex-1 overflow-y-auto rounded-md border p-4">
         {messages.length === 0 && (
-          <p className="text-sm text-gray-500">Stelle LegalLexi deine Frage:</p>
+          <p className="text-sm italic text-gray-500">
+            Stelle LegalLexi deine Frage:
+          </p>
         )}
 
         {messages.map((msg) => (
