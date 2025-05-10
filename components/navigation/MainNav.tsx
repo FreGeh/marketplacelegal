@@ -3,7 +3,13 @@
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard } from "lucide-react";
+import {
+  LayoutDashboard,
+  FileText,
+  Lock,
+  BookOpen,
+  Briefcase,
+} from "lucide-react";
 
 const links = [
   { href: "/chat", label: "Chat" },
@@ -21,12 +27,12 @@ export default function MainNav({ className }: { className?: string }) {
         className,
       )}
     >
-      {/* ── Logo / Brand ─────────────────────────────── */}
+      {/* Logo / Brand */}
       <Link href="/" className="font-display text-xl font-bold">
         Rechts<span className="text-primary">KI Marktplatz</span>
       </Link>
 
-      {/* ── Centered Tabs ────────────────────────────── */}
+      {/* Centered Tabs */}
       <ul className="hidden items-center gap-6 md:flex">
         {links.map(({ href, label }) => (
           <li key={href}>
@@ -40,40 +46,45 @@ export default function MainNav({ className }: { className?: string }) {
         ))}
 
         {/* Lösungen mit Hover-Dropdown */}
-        <li className="group relative">
-          <span className="text-muted-foreground hover:text-foreground cursor-pointer text-lg font-medium transition-colors">
+        <li className="relative">
+          <button className="text-muted-foreground hover:text-foreground flex items-center text-lg font-medium transition-colors focus:outline-none">
             Lösungen
-          </span>
-          <ul className="invisible absolute left-0 mt-2 w-48 rounded-md bg-white opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100">
+          </button>
+
+          <ul className="group invisible absolute left-0 top-full z-10 mt-2 w-56 rounded-lg bg-white py-1 opacity-0 shadow-lg transition-all duration-200 ease-in-out focus-within:visible focus-within:opacity-100 hover:visible hover:opacity-100">
             <li>
               <Link
-                href="/contract-check"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/loesungen/contractcheck"
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
               >
+                <FileText className="h-5 w-5 text-indigo-500" />
                 ContractCheck
               </Link>
             </li>
             <li>
               <Link
-                href="/nda-check"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/loesungen/nda-check"
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
               >
+                <Lock className="h-5 w-5 text-green-500" />
                 NDACheck
               </Link>
             </li>
             <li>
               <Link
-                href="/dokumentation-automation"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/loesungen/dokumentation-automation"
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
               >
+                <BookOpen className="h-5 w-5 text-blue-500" />
                 Dokumentation Automation
               </Link>
             </li>
             <li>
               <Link
-                href="/case-cockpit"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/loesungen/case-cockpit"
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
               >
+                <Briefcase className="h-5 w-5 text-yellow-500" />
                 Case Cockpit
               </Link>
             </li>
@@ -81,7 +92,7 @@ export default function MainNav({ className }: { className?: string }) {
         </li>
       </ul>
 
-      {/* ── Auth buttons ─────────────────────────────── */}
+      {/* Auth buttons */}
       <div className="flex items-center gap-3">
         <SignedIn>
           <UserButton>
