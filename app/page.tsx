@@ -213,10 +213,10 @@ export default function Home() {
             </Link>
           ))}
         </div>
-        
+
         <Link
           href="/marktplatz"
-          className="flex transform flex-col items-center justify-center rounded-2xl border-2
+          className="mt-8 flex transform flex-col items-center justify-center rounded-2xl border-2
              border-dashed border-indigo-200 bg-indigo-50/50 p-6 text-indigo-600
              transition hover:scale-105 hover:shadow-lg"
         >
