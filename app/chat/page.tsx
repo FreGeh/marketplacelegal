@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState, ReactNode } from "react";
+import { Mic2 } from "lucide-react";
 
 type Message = {
   id: number;
@@ -39,34 +40,51 @@ export default function ChatPage() {
                 ...msg,
                 content: (
                   <>
-                    <p>Verträge bergen oft versteckte Fallstricke:</p>
-                    <ul className="ml-4 list-inside list-disc">
-                      <li>unklare Leistungsbeschreibungen</li>
-                      <li>widersprüchliche Laufzeiten</li>
-                      <li>
-                        automatische Verlängerungen ohne klare Kündigungsrechte
-                      </li>
-                      <li>intransparente Preis- und Zahlungsmodalitäten</li>
-                      <li>
-                        übermäßige Haftungs- und Gewährleistungsausschlüsse
-                        sowie unzulässige AGB-Klauseln
-                      </li>
-                    </ul>
-                    <p className="mt-2">
-                      Fehlende Formvorschriften – etwa Unterschrift, Datum oder
-                      notarielle Beurkundung – können die Wirksamkeit gefährden.
-                    </p>
-                    <p>
-                      Achten Sie darauf, dass alle Parteien korrekt benannt und
-                      vertretungsberechtigt sind und keine Klauseln gegen
-                      zwingendes Recht oder gute Sitten verstoßen.
-                    </p>
-                    <p className="mt-2">
-                      Eine klare, verständliche Sprache und eine konsistente
-                      Gesamtauslegung minimieren späteren Streit. So gewinnen
-                      Sie bereits vor Unterschrift die nötige Klarheit und
-                      Rechtssicherheit.
-                    </p>
+                    <div>
+                      <p>Verträge bergen oft versteckte Fallstricke:</p>
+                      <ul className="ml-4 list-inside list-disc">
+                        <li>unklare Leistungsbeschreibungen</li>
+                        <li>widersprüchliche Laufzeiten</li>
+                        <li>
+                          automatische Verlängerungen ohne klare
+                          Kündigungsrechte
+                        </li>
+                        <li>intransparente Preis- und Zahlungsmodalitäten</li>
+                        <li>
+                          übermäßige Haftungs- und Gewährleistungsausschlüsse
+                          sowie unzulässige AGB-Klauseln
+                        </li>
+                      </ul>
+                      <p className="mt-2">
+                        Fehlende Formvorschriften – etwa Unterschrift, Datum
+                        oder notarielle Beurkundung – können die Wirksamkeit
+                        gefährden.
+                      </p>
+                      <p>
+                        Achten Sie darauf, dass alle Parteien korrekt benannt
+                        und vertretungsberechtigt sind und keine Klauseln gegen
+                        zwingendes Recht oder gute Sitten verstoßen.
+                      </p>
+                      <p className="mt-2">
+                        Eine klare, verständliche Sprache und eine konsistente
+                        Gesamtauslegung minimieren späteren Streit. So gewinnen
+                        Sie bereits vor Unterschrift die nötige Klarheit und
+                        Rechtssicherheit.
+                      </p>
+                    </div>
+                    <div className="mt-2 rounded-md border-l-4 border-indigo-500 bg-indigo-50 p-3 text-indigo-700">
+                      <p className="font-semibold">Empfohlen: ContractCheck</p>
+                      <p className="text-sm">
+                        Unsere von Rechtsanwälten entwickelte Lösung für Ihre
+                        Vertragsprüfung.
+                      </p>
+                      <a
+                        href="/contract-check"
+                        className="mt-1 inline-block font-medium hover:underline"
+                      >
+                        Jetzt entdecken &rarr;
+                      </a>
+                    </div>
                   </>
                 ),
               }
@@ -99,7 +117,7 @@ export default function ChatPage() {
         ))}
       </div>
 
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="flex items-center gap-2">
         <input
           type="text"
           className="flex-1 rounded-md border px-4 py-2"
@@ -107,6 +125,12 @@ export default function ChatPage() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
+        <button
+          type="button"
+          className="rounded-full bg-gray-200 p-2 hover:bg-gray-300"
+        >
+          <Mic2 className="h-5 w-5 text-gray-600" />
+        </button>
         <button
           type="submit"
           className="rounded-md bg-indigo-500 px-4 py-2 font-medium text-white hover:bg-indigo-600"
