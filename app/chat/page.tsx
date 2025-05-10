@@ -16,7 +16,7 @@ export default function ChatPage() {
 
   // Definiere hier Deine Mock-Antworten in der gewünschten Reihenfolge
   const mockResponses: ReactNode[] = [
-    // 1. Antwort: Was ist wichtig bei der NDA-Prüfung + gezielte Rückfragen
+    // 1. Frage: Worauf genau muss ich bei einer NDA achten, die ich von einem Autohersteller bekommen habe?
     <>
       <p>
         Beim Prüfen einer <strong>NDA</strong> Ihres Autoherstellers sollten Sie
@@ -62,7 +62,7 @@ export default function ChatPage() {
       </ul>
     </>,
 
-    // 2. Antwort: Auswertung der Nutzer-Angaben + Empfehlung NDACheck
+    // 2. Frage: Wir möchten unsere technischen Zeichnungen, Prozessparameter und Erstmusterprüfberichte für 3 Jahre an die Entwicklungs­abteilung des Autoherstellers übermitteln. Außerdem sollen auch unsere Mitarbeiter im F&E-Team zur Verschwiegenheit verpflichtet sein. Ist das so ausreichend abgedeckt?
     <>
       <p>
         Sie möchten also Ihre <strong>technischen Zeichnungen</strong> und
