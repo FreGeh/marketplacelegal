@@ -100,7 +100,7 @@ export default function Home() {
             Geheimhaltungsvereinbarungen.
           </p>
           <a
-            href="/loesungen/nda-check"
+            href="/marktplatz/nda-check"
             className="mt-2 inline-flex items-center gap-1 rounded-md bg-blue-500 px-3 py-1 font-medium text-white hover:bg-blue-600"
           >
             NDACheck öffnen →
@@ -150,28 +150,28 @@ export default function Home() {
   /* ─────────── KI‑App‑Katalog ─────────── */
   const solutions = [
     {
-      href: "/loesungen/contractcheck",
+      href: "/marktplatz/contractcheck",
       label: "ContractCheck",
       icon: <FileText className="h-8 w-8" />,
       color: "bg-indigo-100",
       description: "Verträge automatisch prüfen & optimieren.",
     },
     {
-      href: "/loesungen/nda-check",
+      href: "/marktplatz/nda-check",
       label: "NDACheck",
       icon: <Lock className="h-8 w-8" />,
       color: "bg-green-100",
       description: "Geheimhaltungs­vereinbarungen schnell absichern.",
     },
     {
-      href: "/loesungen/dokumentation-automation",
+      href: "/marktplatz/dokumentation-automation",
       label: "Dokumentation Automation",
       icon: <BookOpen className="h-8 w-8" />,
       color: "bg-blue-100",
       description: "Dokumente automatisch erstellen & pflegen.",
     },
     {
-      href: "/loesungen/case-cockpit",
+      href: "/marktplatz/case-cockpit",
       label: "Case Cockpit",
       icon: <Briefcase className="h-8 w-8" />,
       color: "bg-yellow-100",
@@ -185,7 +185,7 @@ export default function Home() {
       {/* Hero */}
       <section className="container mx-auto flex flex-col items-center justify-center gap-8 px-5 py-24 text-center">
         <h1 className="bg-gradient-to-br from-black to-stone-600 bg-clip-text text-5xl font-extrabold text-transparent md:text-7xl">
-          Rechts&nbsp;AI <br /> für den Mittelstand
+          Rechtliche&nbsp;AI <br /> für den Mittelstand
         </h1>
         <p className="text-muted-foreground max-w-2xl text-2xl">
           Sofortige Problemlösungen per KI‑Apps – bei komplizierten Problemen
