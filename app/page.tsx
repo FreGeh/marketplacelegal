@@ -152,8 +152,8 @@ export default function Home() {
           Rechts AI <br /> für den Mittelstand
         </h1>
         <p className="text-muted-foreground max-w-2xl text-2xl">
-          Sofortige Problemlösungen per KI-Apps – bei Spezialfragen unkompliziert mit
-          Top-Fachanwälten vernetzt.
+          Sofortige Problemlösungen per KI-Apps – bei Spezialfragen
+          unkompliziert mit Top-Fachanwälten vernetzt.
         </p>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link
