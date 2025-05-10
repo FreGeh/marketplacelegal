@@ -46,12 +46,12 @@ export default function MainNav({ className }: { className?: string }) {
         ))}
 
         {/* Lösungen mit Hover-Dropdown */}
-        <li className="relative">
+        <li className="group relative">
           <button className="text-muted-foreground hover:text-foreground flex items-center text-lg font-medium transition-colors focus:outline-none">
             Lösungen
           </button>
 
-          <ul className="group invisible absolute left-0 top-full z-10 mt-2 w-56 rounded-lg bg-white py-1 opacity-0 shadow-lg transition-all duration-200 ease-in-out focus-within:visible focus-within:opacity-100 hover:visible hover:opacity-100">
+          <ul className="invisible absolute left-0 top-full z-20 mt-2 w-56 rounded-lg bg-white py-2 opacity-0 shadow-lg transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
             <li>
               <Link
                 href="/loesungen/contractcheck"
