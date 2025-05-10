@@ -197,7 +197,9 @@ export default function Home() {
       <section className="container mx-auto mb-40 px-6">
         {" "}
         {/*  mb‑40 lässt Platz für Chat‑Fenster */}
-        <h2 className="mb-8 text-center text-3xl font-bold">Unsere KI‑Apps</h2>
+        <h2 className="mb-8 text-center text-3xl font-bold">
+          KI‑App Marktplatz
+        </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map(({ href, label, icon, color, description }) => (
             <Link
@@ -210,20 +212,12 @@ export default function Home() {
               <p className="text-sm text-gray-700">{description}</p>
             </Link>
           ))}
-          {/* Platzhalter für kommende Lösungen */}
-          {Array(2)
-            .fill(null)
-            .map((_, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-gray-100 p-6"
-              >
-                <div className="mb-4 h-8 w-8 rounded bg-gray-300" />
-                <h3 className="text-xl font-medium text-gray-500">
-                  Bald verfügbar
-                </h3>
-              </div>
-            ))}
+          <Link
+            href="/catalog"
+            className="bg-primary hover:bg-primary/90 rounded-md px-6 py-3 text-xl font-medium text-black shadow"
+          >
+            Andere Apps entdecken
+          </Link>
         </div>
       </section>
 

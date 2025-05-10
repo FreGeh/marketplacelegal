@@ -13,6 +13,7 @@ import {
 
 const links = [
   { href: "/chat", label: "Chat" },
+  { href: "/marktplatz", label: "Marktplatz" },
   { href: "/ressourcen", label: "Ressourcen" },
   { href: "/partner", label: "Partner" },
   { href: "/preise", label: "Preise" },
@@ -44,52 +45,6 @@ export default function MainNav({ className }: { className?: string }) {
             </Link>
           </li>
         ))}
-
-        {/* Lösungen mit Hover-Dropdown */}
-        <li className="group relative">
-          <button className="text-muted-foreground hover:text-foreground flex items-center text-lg font-medium transition-colors focus:outline-none">
-            KI-Apps
-          </button>
-
-          <ul className="invisible absolute left-0 top-full z-20 mt-2 w-56 rounded-lg bg-white py-2 opacity-0 shadow-lg transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
-            <li>
-              <Link
-                href="/loesungen/contract-check"
-                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
-              >
-                <FileText className="h-5 w-5 text-indigo-500" />
-                ContractCheck
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/loesungen/nda-check"
-                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
-              >
-                <Lock className="h-5 w-5 text-green-500" />
-                NDACheck
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/loesungen/dokumentation-automation"
-                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
-              >
-                <BookOpen className="h-5 w-5 text-blue-500" />
-                Dokumentation Automation
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/loesungen/case-cockpit"
-                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100"
-              >
-                <Briefcase className="h-5 w-5 text-yellow-500" />
-                Case Cockpit
-              </Link>
-            </li>
-          </ul>
-        </li>
       </ul>
 
       {/* Auth buttons */}
