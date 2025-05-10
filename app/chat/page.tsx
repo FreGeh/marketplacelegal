@@ -53,17 +53,17 @@ export default function ChatPage() {
                           <strong>widersprüchliche Laufzeiten</strong>
                         </li>
                         <li>
-                          automatische Verlängerungen ohne klare
+                          automatische Verlängerungen ohne klare  
                           <strong>Kündigungsrechte</strong>
                         </li>
                         <li>
-                          intransparente
+                          intransparente 
                           <strong>Preis- und Zahlungsmodalitäten</strong>
                         </li>
                         <li>
-                          übermäßige
+                          übermäßige 
                           <strong>
-                            Haftungs- und Gewährleistungsausschlüsse
+                            Haftungs- und Gewährleistungsausschlüsse 
                           </strong>
                           sowie <strong>unzulässige AGB-Klauseln</strong>
                         </li>
